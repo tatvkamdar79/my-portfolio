@@ -2,6 +2,7 @@ import React from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 import myImg from "../assets/assets/Me/me2.jpg";
+import Typed from "react-typed";
 
 const Home = () => {
   return (
@@ -12,7 +13,14 @@ const Home = () => {
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center sm: mt-36 sm: mb-10">
           <h2 className="text-4xl sm:text-7xl font-bold text-cyan-500">
-            Hey! I'm Tatva Kamdar
+            Hey! I'm{" "}
+            <Typed
+              strings={["Tatva Kamdar"]}
+              typeSpeed={100}
+              backSpeed={60}
+              backDelay={4500}
+              loop
+            />
           </h2>
           <p className="py-4 max-w-md text-orange-500">
             A meticulous final year computer science student committed to
