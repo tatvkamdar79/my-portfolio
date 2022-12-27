@@ -21,7 +21,7 @@ const Contact = () => {
             />
           </p>
           <p className="py-6 text-cyan-500">
-            Submit the form below to get in touch with me
+            Submit the form below to get in touch with me.
           </p>
         </div>
 
