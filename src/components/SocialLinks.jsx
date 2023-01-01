@@ -50,7 +50,7 @@ const SocialLinks = () => {
           Resume <SlDoc size={28} />
         </>
       ),
-      href: "/Tatva_Kamdar.pdf",
+      href: "/Tatva_Kamdar_Resume.pdf",
       style: "rounded-br-md rounded-bl-md",
       download: true,
     },
