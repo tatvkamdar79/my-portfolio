@@ -5,32 +5,37 @@ import navbar from "../assets/portfolio/navbar.jpg";
 import reactParallax from "../assets/portfolio/reactParallax.jpg";
 import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
 import reactWeather from "../assets/portfolio/reactWeather.jpg";
+import omni from "../assets/Projects/Omni/omni.jpg";
 import { BsFileEarmarkCodeFill } from "react-icons/bs";
 
 const Projects = () => {
   const portfolios = [
     {
       id: 1,
-      src: arrayDestruct,
+      src: omni,
     },
     {
       id: 2,
-      src: reactParallax,
+      src: arrayDestruct,
     },
     {
       id: 3,
-      src: navbar,
+      src: reactParallax,
     },
     {
       id: 4,
-      src: reactSmooth,
+      src: navbar,
     },
     {
       id: 5,
-      src: installNode,
+      src: reactSmooth,
     },
     {
       id: 6,
+      src: installNode,
+    },
+    {
+      id: 7,
       src: reactWeather,
     },
   ];
@@ -43,8 +48,12 @@ const Projects = () => {
       <div className="relative max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="pb-1 text-4xl font-bold inline border-b-4 border-white text-orange-500">
-            Projects <BsFileEarmarkCodeFill size={32} className="text-green-400
-             inline relative bottom-[3px]" />
+            Projects{" "}
+            <BsFileEarmarkCodeFill
+              size={32}
+              className="text-green-400
+             inline relative bottom-[3px]"
+            />
           </p>
           <p className="py-6">Check out some of my work right here</p>
         </div>
@@ -58,10 +67,10 @@ const Projects = () => {
                 className="rounded-md duration-200 hover:scale-105"
               />
               <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  Demo
+                <button className="w-1/2 px-6 py-3 m-4 border border-gray-600 rounded-md duration-200 hover:scale-105 hover:border-gray-400 hover:text-yellow-600 hover:font-extrabold">
+                  More
                 </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <button className="w-1/2 px-6 py-3 m-4 border border-gray-600 rounded-md duration-200 hover:scale-105 hover:border-gray-400 hover:text-yellow-600 hover:font-extrabold">
                   Code
                 </button>
               </div>

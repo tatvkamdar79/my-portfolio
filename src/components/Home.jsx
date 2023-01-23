@@ -21,20 +21,30 @@ const Home = () => {
             environments. In possession of strong communication and leadership
             skills.
           </p>
-
-          <div>
+          <div className="flex flex-row">
             <Link
-              to="projects"
+              to="about"
               smooth
               duration={500}
               className="font-semibold group text-black w-fit pl-4 pr-2 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-400 to-teal-500 cursor-pointer"
             >
-              Projects
+              About Me
               <span className="group-hover:rotate-90 duration-300">
                 <MdOutlineKeyboardArrowRight size={25} className="ml-1" />
               </span>
             </Link>
-          </div>
+            <Link
+              to="projects"
+              smooth
+              duration={500}
+              className="font-semibold group text-black w-fit ml-3 pl-4 pr-2 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-teal-500 to-cyan-400 cursor-pointer"
+            >
+              My Projects
+              <span className="group-hover:rotate-90 duration-300">
+                <MdOutlineKeyboardArrowRight size={25} className="ml-1" />
+              </span>
+            </Link>
+          </div>{" "}
         </div>
 
         <img
