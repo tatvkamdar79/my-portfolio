@@ -109,7 +109,7 @@ const Experience = () => {
               className={`relative shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.01 }}
+              viewport={{ once: true, amount: 0.01 }}
               transition={{
                 delay: id * 0.3,
                 duration: 0.3,
