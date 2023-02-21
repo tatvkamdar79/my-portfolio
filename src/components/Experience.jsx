@@ -8,8 +8,9 @@ import tailwind from "../assets/assets/tailwind.png";
 import Arduino from "../assets/assets/Arduino.png";
 import Python from "../assets/assets/Python.png";
 import Java from "../assets/assets/java.png";
-import opencv from '../assets/assets/openCV.png'
+import opencv from "../assets/assets/openCV.png";
 import { FaUserGraduate } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Experience = () => {
   const techs = [
@@ -81,25 +82,50 @@ const Experience = () => {
       className="bg-gradient-to-b from-black to-black w-full py-10"
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-cyan-500 py-16">
-        <div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <p className="text-orange-500 text-4xl font-bold border-b-4 border-white pb-1 inline">
             Experience{" "}
-            <FaUserGraduate size={32} className="text-white inline relative bottom-1.5" />
+            <FaUserGraduate
+              size={32}
+              className="text-white inline relative bottom-1.5"
+            />
           </p>
           <p className="py-6">These are the technologies I've worked with</p>
-        </div>
+        </motion.div>
 
         <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 py-8 px-12 sm:px-0 font-bold text-lg">
           {techs.map(({ id, src, title, style }) => (
-            <div
+            <motion.div
               key={id}
               className={`relative shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.01 }}
+              transition={{
+                delay: id * 0.3,
+                duration: 0.3,
+                default: { ease: "linear" },
+                damping: 0.3,
+              }}
+              variants={{
+                hidden: { opacity: 0, x: -100 },
+                visible: { opacity: 1, x: 0 },
+              }}
             >
               <img src={src} alt="" className="w-20 mx-auto mb-8" />
               <div className="flex flex-col">
                 <p className="text-center">{title}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

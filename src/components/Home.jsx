@@ -2,6 +2,7 @@ import React from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 import myImg from "../assets/assets/Me/me2.jpg";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
@@ -9,7 +10,17 @@ const Home = () => {
       name="home"
       className="h-screen w-full bg-gradient-to-b from-black  to-black md:pb-20 lg:pb-20 xl:pb-20"
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
+      <motion.div
+        className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1 }}
+        variants={{
+          hidden: { opacity: 0, y: -250 },
+          visible: { opacity: 1, y: 0 },
+        }}
+      >
         <div className="flex flex-col justify-center sm: mt-36 sm: mb-10">
           <h2 className="text-4xl sm:text-7xl font-bold text-cyan-500">
             Hey! I'm Tatva Kamdar
@@ -52,7 +63,7 @@ const Home = () => {
           alt="my profile"
           className="rounded-2xl sm:w-3/4 md:w-1/2 md:mt-[6rem]"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
